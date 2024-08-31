@@ -1,6 +1,6 @@
-# Lead Scoring Analysis and Segmentation
+# Sales Forecasting for a Retail Company
 
-![featured](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation//blob/main/00_Imagenes/featured.jpg?raw=true)
+![featured](https://github.com/pabloelt/sales-forcasting-for-a-retail-company//blob/main/00_Imagenes/featured.jpg?raw=true)
 
 ##### Table of Contents 
 * [Introduction](#introduction)
@@ -16,18 +16,13 @@
  
 ## Introduction
 
-The client for this project is an online teaching company that offers a high-value online course designed to train professionals in the data science sector. The company advertises this course on various websites and search engines. When people visit the website—promoted effectively by the marketing department—they may browse the course, fill out a form, or watch related videos. If they provide their email address or phone number through a form, they are classified as a lead. Additionally, the company also acquires leads through referrals from past clients.
+The client for this project is a large retailer based in the United States. The company has identified issues in its warehouse operations, leading to losses and stock-outs for several products. The objective is to implement a forecasting model using artificial intelligence algorithms to predict the appropriate stock levels for at least the next 8 days. This initiative aims to enhance operational efficiency and increase the company’s profitability.
 
-Once these leads are acquired, the sales team begins reaching out via calls, emails, and other forms of communication. However, while some leads convert into customers, most do not, leading to inefficiencies that negatively impact the company’s profitability.
-
- * [See a technical explanation of the project here](https://pabloelt.github.io/project/project5/)
+ * [See a technical explanation of the project here](https://pabloelt.github.io/project/project6/)
 
 ## Objectives
 
-The main objective is to analyse the historical leads information of the company to propose potential actions that will increase the overall turnover and reverse the low conversion rate at which the company is operating. To achieve this goal, we will create advanced analytical assets such as:
-
-* **Lead segmentation model:** This tool will help to identify the key customer groups interested in the product, enabling the sales team to tailor marketing efforts effectively for each identified segment.
-* **Predictive lead scoring model:** It will assist the sales team in identifying potential customers who are most likely to convert into final clients, as well as leads that are not economically viable to pursue.
+The primary objective is to develop a forecasting model utilizing a set of machine learning algorithms to predict sales for the next 8 days at the store-product level. These algorithms are trained using the extensive three-year history available in the retail company’s SQL database, employing massive modeling techniques to ensure accuracy and reliability.
 
 ## Project results
 
@@ -35,54 +30,29 @@ The main objective is to analyse the historical leads information of the company
 
 Several insights have been uncovered through the exploratory data analysis. The main actionable initiatives are summarized below.
 
-**Actions to improve leads' management:**
+1. With the current information collected by the company, it is challenging to determine whether intermittent demand is due to stock-outs or simply zero demand for the product. Therefore, it is highly recommended to track warehouse data closely.
 
-1. Enhance the quality of survey or form questions to gather more user inputs and reduce the occurrence of NaN or default (‘Select’) values.
-2. Collect timestamps for website visits to enable seasonality analysis and implement cookies to track and identify users as they navigate different pages on the website.
-3. Develop a new **lead segmentation algorithm** that categorizes the company's diverse lead profiles, enabling the identification of the best-fitting group for each new lead. This will allow for more personalized commercial actions.
+2. To optimize sales and reduce warehouse costs, implementing a forecasting model based on machine learning algorithms can be highly effective. A bottom-up approach, starting at the product level, is particularly recommended in this context.
 
-**Actions to improve lead-to-customer conversion rate:**
+3. Discounts have proven to be quite successful, especially for product 090, which is the top seller. It may be worthwhile to apply this strategy to other products and evaluate the overall impact.
 
-1. Implement a **predictive lead scoring algorithm** that identifies individuals most likely to convert into paying customers. This will reduce the sales team's workload allowing them to focus more time on engaging with the most promising leads.
+4. Saturdays and Sundays show the highest sales volumes, presenting an opportunity to develop targeted strategies and campaigns.
 
-**Actions to improve commercial and marketing channels performance:**
+5. Special days like Thanksgiving, Labor Day, and Easter generate significant sales. These occasions should be thoroughly analyzed, and marketing strategies should be developed to enhance the company’s profitability.
 
-1. Enhance the content strategy across the website, lead magnet, and emails to attract more traffic and increase user engagement. Focus on creating tailored content specifically for working professionals interested in the data science sector.
-2. Develop a referral program to motivate existing customers to recommend the course to their friends, family, and colleagues.
-3. Allocate more resources to acquiring leads through ‘Reference’ channel, as they demonstrate the highest conversion rate.
-4. Boost investments in SMS campaigns, given their strong performance.
 
-### Lead segmentation model
+### Sales Forecasting model
 
-Four distinct potential customer profiles were identified through the implementation of the lead segmentation model. These profiles correspond to very low, low, medium, and super high-quality leads. The key actionable initiatives for each profile are summarized below.
+In this project, we have developed a robust recursive forecasting model based on a set of machine learning algorithms for sales prediction. This model analyzes each product-store combination individually and tailors the algorithm to predict demand for the next 8 days. LightGBM, with standard hyperparameters, was identified as the best option for predictive performance. The model was tested with new data from December 2015, yielding satisfactory results, with a mean absolute error of approximately 4.73.
 
-1. The company's most valuable leads are working professionals who arrive through the lead form submission.
-2. While SMS campaigns are generally effective, they should be targeted more precisely:
-  * Focus on working professionals from API sources who spend above-average time on the website.
-  * Avoid sending SMS to leads from Landing Page Submissions who spend minimal time on the site, as they represent the lowest quality leads and divert resources from more promising campaigns.
-3. The live chat feature primarily attracts low-quality leads. The company should consider reallocating resources from this service and, for leads from API sources, prioritize email marketing and SMS campaigns instead.
+This forecasting model will help to reduce warehouse costs and stock-outs, significantly boosting the company's performance and profitability.
 
-### Predictive lead scoring model
-
-A powerful predictive lead scoring model was developed using a straightforward logistic regression algorithm. After implementing this predictive model, the company has been able to:
-
-1. Increase its conversion rate from 41.70% to 45.77%.
-2. Reduce by 9.31% the workload to be managed by the sales department.
-3. Reduce by 28.81% the loss in investments.
-4. Increase its sales profit by 4.75%.
-
-|   | As is  | To be  | Improvements  |
-|--:|--:|--:|--:|
-| Conversion rate  | 41.70%  | 45.77%  | Increased by 4.07%  |
-| Workload  | 2084  | 1890  | Reduced by 9.31%  |
-| Lost investment  | 6075  | 4325  | Reduced by 28.81%  |
-| Sales profit  | 33021.31  | 34591.35  | Increased by 4.75%  |
 
 ## Project structure
 
 * 📁 00_Imagenes: Contains project images.
 * 📁 01_Documentos: Contains basic project files:
-  * <mark>leadscoring.yml</mark>: Project environment file.
+  * <mark>retail.yml</mark>: Project environment file.
   * <mark>FaseDesarrollo_Transformaciones.xlsx</mark>: Support file for designing feature transformation processes.
   * <mark>FaseProduccion_Procesos.xlsx</mark>: Support file for designing final production script.
 * 📁 02_Datos
