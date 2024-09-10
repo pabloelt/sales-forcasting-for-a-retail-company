@@ -64,17 +64,17 @@ This forecasting model will help to reduce warehouse costs and stock-outs, signi
     * This folder contains the datasets resulting from each of the stages of the project (data quality, exploratory data analysis, variable transformation, ...).
 * 📁 03_Notebooks
   * 📁 01_Funciones
-      * <mark>FuncionesRetail.ipynb</mark>: Notebook containing all custom functions used in the training and production of the model.
-    * 📁 02_Desarrollo
-      * <mark>01_Set Up.ipynb</mark>: Notebook used for the initial set up of the project.
-      * <mark>02_Calidad de Datos.ipynb</mark>: Notebook detailing and executing all data quality processes.
-      * <mark>03_EDA.ipynb</mark>: Notebook used for the execution of the exploratory data analysis.
-      * <mark>04_Transformacion de datos.ipynb</mark>: Notebook that details and executes the data transformation processes necessary to prepare the variables for the models.
-      * <mark>05_Preseleccion de variables.ipynb</mark>: Notebook used for the variable selection process.
-      * <mark>06_Modelizacion para Regresion.ipynb</mark>: Notebook for modeling the predictive forecasting model. It contains the model selection, the hyperparametrization, and the evaluation of results. Both individual and massive modeling are also developed in this notebook.
-      * <mark>07_Preparacion del codigo de produccion.ipynb</mark>: Notebook used to compile all the quality, transformation, and variable selection processes, as well as the final model and execution and retraining processes. It is used to create the final retraining and execution pipes that condense all the aforementioned processes.
-      * 📁 03_Sistema
-      * This folder contains the files (production script, models, functions ...) used in the model's deployment. 
+    * <mark>FuncionesRetail.ipynb</mark>: Notebook containing all custom functions used in the training and production of the model.
+  * 📁 02_Desarrollo
+    * <mark>01_Set Up.ipynb</mark>: Notebook used for the initial set up of the project.
+    * <mark>02_Calidad de Datos.ipynb</mark>: Notebook detailing and executing all data quality processes.
+    * <mark>03_EDA.ipynb</mark>: Notebook used for the execution of the exploratory data analysis.
+    * <mark>04_Transformacion de datos.ipynb</mark>: Notebook that details and executes the data transformation processes necessary to prepare the variables for the models.
+    * <mark>05_Preseleccion de variables.ipynb</mark>: Notebook used for the variable selection process.
+    * <mark>06_Modelizacion para Regresion.ipynb</mark>: Notebook for modeling the predictive forecasting model. It contains the model selection, the hyperparametrization, and the evaluation of results. Both individual and massive modeling are also developed in this notebook.
+    * <mark>07_Preparacion del codigo de produccion.ipynb</mark>: Notebook used to compile all the quality, transformation, and variable selection processes, as well as the final model and execution and retraining processes. It is used to create the final retraining and execution pipes that condense all the aforementioned processes.
+  * 📁 03_Sistema
+    * This folder contains the files (production script, models, functions ...) used in the model's deployment. 
 * 📁 04_Modelos
   * <mark>lista_modelos_retail.pickle</mark>: File containing all of the developed models for each product-store combination.
   * <mark>ohe_retail.pickle</mark>: File containing the one hot encoding pipe.
