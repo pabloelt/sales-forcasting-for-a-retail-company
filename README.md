@@ -71,7 +71,7 @@ This forecasting model will help to reduce warehouse costs and stock-outs, signi
       * <mark>03_EDA.ipynb</mark>: Notebook used for the execution of the exploratory data analysis.
       * <mark>04_Transformacion de datos.ipynb</mark>: Notebook that details and executes the data transformation processes necessary to prepare the variables for the models.
       * <mark>05_Preseleccion de variables.ipynb</mark>: Notebook used for the variable selection process.
-      * <mark>06_Modelizacion para Regresion.ipynb</mark>: Notebook for modeling the predictive forecasting model. It contains the model selection, the hyperparametrization, the selection of the optimal discrimination threshold, and the evaluation of results. Both individual and massive modeling are also developed in this notebook.
+      * <mark>06_Modelizacion para Regresion.ipynb</mark>: Notebook for modeling the predictive forecasting model. It contains the model selection, the hyperparametrization, and the evaluation of results. Both individual and massive modeling are also developed in this notebook.
       * <mark>07_Preparacion del codigo de produccion.ipynb</mark>: Notebook used to compile all the quality, transformation, and variable selection processes, as well as the final model and execution and retraining processes. It is used to create the final retraining and execution pipes that condense all the aforementioned processes.
       * 📁 03_Sistema
       * This folder contains the files (app script, production script, models, functions ...) used in the model's deployment. 
